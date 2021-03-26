@@ -10,7 +10,7 @@ LACY_STRINGS = [
   "`Tu jakar gand mara bsdk`",
   "`Backchodi matt karo varna maa chod denge tumhari`",
   "`Tu madarchod`",
-  "`Teri ki gand mei ghadhe ka lund`",
+  "`Teri gand mei ghadhe ka lund`",
   "'Teri biwi chai waale se chudati hai'",
   "'Teri fuddi me thukunga'"
 ]
@@ -26,10 +26,10 @@ NIBBA_STRINGS = [
 DEAD_STRINGS = [
   "`Tumhari insta girl bade paimaane par BBC letee hai`",
   "`Tumhari bndi mujhe se chud rhi hai`",
-  "`Dead ka loda chota hai`",
-  "`Dead ka insta girl ki fuddi me thukunga`",
+  "`Tera loda chota hai`",
+  "`Teri insta girl ki fuddi me thukunga`",
   "'Teri insta girl meri malish kar rahi he'",
-  "'Dead ki biwi chai waale sai chudati hai'"
+  "'Teri biwi chai waale sai chudati hai'"
 ]
 
 ABUSE_STRINGS = [
