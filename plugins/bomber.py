@@ -8,7 +8,7 @@ CHANNEL = userge.getCLogger(__name__)  # channel logger object
 @userge.on_cmd("bomb", about={
     'header': "Ntc/Ncell Number Bomber",
     'usage': ".bomb phone total",
-    'examples': ".bomb 9845XXXXXX \nCredits: Detective"})
+    'examples': ".bomb 9845XXXXXX 69\nCredits: Detective"})
     
     
 async def bomb(message: Message):
