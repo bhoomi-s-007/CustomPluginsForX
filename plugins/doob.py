@@ -14,7 +14,7 @@ async def check_and_send(message: Message, *args, **kwargs):
         await message.edit(*args, **kwargs)
 
 
-@userge.on_cmd("doob$", about={'header': "A special plugin for our\nasim_ansarii\n😂😂😂"})
+@userge.on_cmd("doob$", about={'header': "A special plugin for our\n@Wasim_ansarii\n😂😂😂"})
 
 async def doob_func(message):
 	gali = choice(doob)
