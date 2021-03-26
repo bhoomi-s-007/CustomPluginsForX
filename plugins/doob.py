@@ -25,8 +25,7 @@ async def doob_func(message):
 
 
 doob = (
-    "@Wasim_ansarii Doob Maro🥺🥺",
-    "@Wasim_ansarii Ab to doob maro please🥺🥺")
+    """@Wasim_ansarii Doob Maro🥺🥺""")
 stickers_ids = (
     "CAACAgEAAx0CVKYprwACRV1gXcNqmPFQwNVcwhxHllfzTEX3JQACOgEAAlSR4EWCGjrKsMOrbB4E",
     "CAACAgEAAx0CVKYprwACRWBgXcOglSa_nlSXP9Tuco_KAAHSmPAAApUAA-Au2EcG3MYpfKPRRh4E")
