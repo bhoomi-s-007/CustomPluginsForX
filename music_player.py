@@ -6,20 +6,22 @@
 #
 # All rights reserved.
 
-import asyncio
-from userge import Message, userge
-from userge.utils import get_response
 import ffmpeg
 from pytgcalls import GroupCall
+from userge import userge
 
 s = []
 group_call = GroupCall(None, play_on_repeat=False)
 
 
-@userge.on_cmd("playlist", about={
-    'header': "Play Playlist",
-    'description': "Get group playlist ",
-    'usage': "{tr}playlist"})
+@userge.on_cmd(
+    "playlist",
+    about={
+        "header": "Play Playlist",
+        "description": "Get group playlist ",
+        "usage": "{tr}playlist",
+    },
+)
 async def pl(client, message):
     group_call.client = client
     play = await edit_or_reply(message, "`Please Wait!`")
@@ -59,10 +61,14 @@ async def playout_ended_handler(group_call, filename):
     group_call.input_filename = holi
 
 
-@userge.on_cmd(["play", "playmusic"], about={
-    'header': "Play Music",
-    'description': "Play music in voice chat ",
-    'usage': "{tr}play reply to an audio file"})
+@userge.on_cmd(
+    ["play", "playmusic"],
+    about={
+        "header": "Play Music",
+        "description": "Play music in voice chat ",
+        "usage": "{tr}play reply to an audio file",
+    },
+)
 async def play_m(client, message):
     group_call.client = client
     u_s = await edit_or_reply(message, "`Processing..`")
@@ -92,10 +98,14 @@ async def play_m(client, message):
         await u_s.edit(f"Added To Position #{len(s)+1}!")
 
 
-@userge.on_cmd("stopvc", about={
-    'header': "Stop Voice Chat",
-    'description': "Stop the current group voice chat ",
-    'usage': "{tr}stopvc"})
+@userge.on_cmd(
+    "stopvc",
+    about={
+        "header": "Stop Voice Chat",
+        "description": "Stop the current group voice chat ",
+        "usage": "{tr}stopvc",
+    },
+)
 async def kill_vc_(client, message):
     group_call.client = client
     if not group_call.is_connected:
@@ -105,10 +115,14 @@ async def kill_vc_(client, message):
     await edit_or_reply(message, "`Stopped Playing Songs!`")
 
 
-@userge.on_cmd("rvc", about={
-    'header': "Replay song",
-    'description': "Replays song in VC ",
-    'usage': "{tr}rvc"})
+@userge.on_cmd(
+    "rvc",
+    about={
+        "header": "Replay song",
+        "description": "Replays song in VC ",
+        "usage": "{tr}rvc",
+    },
+)
 async def replay(client, message):
     group_call.client = client
     if not group_call.is_connected:
@@ -118,10 +132,14 @@ async def replay(client, message):
     await edit_or_reply(message, "`Re-Playing!`")
 
 
-@userge.onon_cmd("rjvc", about={
-    'header': "Rejoin VC",
-    'description': "Rejoins Voice chat ",
-    'usage': "{tr}rjvc"})
+@userge.onon_cmd(
+    "rjvc",
+    about={
+        "header": "Rejoin VC",
+        "description": "Rejoins Voice chat ",
+        "usage": "{tr}rjvc",
+    },
+)
 async def rejoinvcpls(client, message):
     group_call.client = client
     if not group_call.is_connected:
@@ -131,10 +149,14 @@ async def rejoinvcpls(client, message):
     await edit_or_reply(message, f"`Rejoined! - Vc`")
 
 
-@userge.on_cmd("leavevc", about={
-    'header': "Leave Voice Chat",
-    'description': "Leaves group VC ",
-    'usage': "{tr}leavevc"})
+@userge.on_cmd(
+    "leavevc",
+    about={
+        "header": "Leave Voice Chat",
+        "description": "Leaves group VC ",
+        "usage": "{tr}leavevc",
+    },
+)
 async def leave_vc_test(client, message):
     group_call.client = client
     if not group_call.is_connected:
@@ -144,10 +166,14 @@ async def leave_vc_test(client, message):
     await edit_or_reply(message, f"`Left : {message.chat.title} - Vc`")
 
 
-@userge.on_cmd("setvolvc", about={
-    'header': "Set voice chat volume",
-    'description': "Sets voice chat volume between 2-100 ",
-    'usage': "{tr}setvolvc"})
+@userge.on_cmd(
+    "setvolvc",
+    about={
+        "header": "Set voice chat volume",
+        "description": "Sets voice chat volume between 2-100 ",
+        "usage": "{tr}setvolvc",
+    },
+)
 async def set_vol(client, message):
     group_call.client = client
     if not group_call.is_connected:

@@ -1,14 +1,12 @@
-#Those pro noob blah blah commands -_-
+# Those pro noob blah blah commands -_-
 
 """Pro Noob Blah Blah"""
-import re, asyncio
-from collections import deque
-from asyncio import sleep
-from re import sub
-from userge import userge, Message
+import asyncio
+
+from userge import Message, userge
 
 
-@userge.on_cmd("unoob$", about={'header': "You Noob"})
+@userge.on_cmd("unoob$", about={"header": "You Noob"})
 async def unoob_(message: Message):
     """you noob"""
     animation_interval = 1
@@ -26,11 +24,11 @@ async def unoob_(message: Message):
         "EvErYbOdY iZ BiGGeSt NoOoB uNtiL YoU aRriVe 😈",
     ]
     for i in animation_ttl:
-            await asyncio.sleep(animation_interval)
-            await message.edit(animation_chars[i % 9])
-            
+        await asyncio.sleep(animation_interval)
+        await message.edit(animation_chars[i % 9])
 
-@userge.on_cmd("menoob$", about={'header': "I'm Noob"})
+
+@userge.on_cmd("menoob$", about={"header": "I'm Noob"})
 async def menoob_(message: Message):
     """me noob"""
     animation_interval = 1
@@ -48,11 +46,11 @@ async def menoob_(message: Message):
         "EvErYbOdY iZ BiGGeSt NoOoB uNtiL i aRriVe 😈",
     ]
     for i in animation_ttl:
-            await asyncio.sleep(animation_interval)
-            await message.edit(animation_chars[i % 9])
-            
-            
-@userge.on_cmd("upro$", about={'header': "You Pro"})
+        await asyncio.sleep(animation_interval)
+        await message.edit(animation_chars[i % 9])
+
+
+@userge.on_cmd("upro$", about={"header": "You Pro"})
 async def upro_(message: Message):
     """you're pro"""
     animation_interval = 1
@@ -70,11 +68,11 @@ async def upro_(message: Message):
         "EvErYbOdY iZ BiGGeSt PeRu uNtiL YoU aRriVe 😈",
     ]
     for i in animation_ttl:
-            await asyncio.sleep(animation_interval)
-            await message.edit(animation_chars[i % 9])
-            
-            
-@userge.on_cmd("mepro$", about={'header': "I'm Pro"})
+        await asyncio.sleep(animation_interval)
+        await message.edit(animation_chars[i % 9])
+
+
+@userge.on_cmd("mepro$", about={"header": "I'm Pro"})
 async def upro_(message: Message):
     """i'm pro"""
     animation_interval = 1
@@ -92,5 +90,5 @@ async def upro_(message: Message):
         "EvErYbOdY iZ BiGGeSt PeRu uNtiL i aRriVe 😈",
     ]
     for i in animation_ttl:
-            await asyncio.sleep(animation_interval)
-            await message.edit(animation_chars[i % 9])
+        await asyncio.sleep(animation_interval)
+        await message.edit(animation_chars[i % 9])

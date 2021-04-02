@@ -2,28 +2,24 @@
 
 import asyncio
 from random import choice
-from userge import userge, Message
+
+from userge import Message, userge
 
 
 async def check_and_send(message: Message, *args, **kwargs):
     replied = message.reply_to_message
     if replied:
-        await asyncio.gather(
-            message.delete(),
-            replied.reply(*args, **kwargs)
-        )
+        await asyncio.gather(message.delete(), replied.reply(*args, **kwargs))
     else:
         await message.edit(*args, **kwargs)
 
 
-@userge.on_cmd("gali$", about={'header': "slang to a bitch with power of bot"})
-
+@userge.on_cmd("gali$", about={"header": "slang to a bitch with power of bot"})
 async def gali_func(message):
-	gali = choice(gaali)
-	stickers = choice(stickers_ids)
-	await check_and_send(message, "<code>{}</code>".format(gali), parse_mode='html')
-	await message.reply_sticker(sticker="".join(stickers))
-
+    gali = choice(gaali)
+    stickers = choice(stickers_ids)
+    await check_and_send(message, "<code>{}</code>".format(gali), parse_mode="html")
+    await message.reply_sticker(sticker="".join(stickers))
 
 
 gaali = (
@@ -43,7 +39,8 @@ gaali = (
     "Tere saat Johnny sins rape Kare aur jab wo teko anal de tab loda andar fas Jaye bkl tere jhaat pe waxing karunga me dhek lio fir jab tu chillayega na tab tere muh me Mai gai ka gobar dalunga",
     "Tere lode pe madhu makkhi Katelode ke ando pe Road roller chale tu kab bathroom me muthne Jaye tho Tera loda ghir Jaye fir tere ando me se lizard ke bacche nikle teko kidnap Kare aur childporn banaye maa ke chuttad ke lode",
     "Tujhetho gali ke kutte gand pe chut rakh ke katenge me bata raha hu",
-    "Madarchod Randi ke bacche Oye bosdike madarchod bhen ke lode tere gand me lohe ka danda garam karke dalu randwe")
+    "Madarchod Randi ke bacche Oye bosdike madarchod bhen ke lode tere gand me lohe ka danda garam karke dalu randwe",
+)
 stickers_ids = (
     "CAADBQADlgADje9BLb-DhGHGfbx6FgQ",
     "CAADBQADBgAD-xNYN79jb8hXjxhyFgQ",
@@ -52,4 +49,5 @@ stickers_ids = (
     "CAADBQADzwADje9BLT69DmYKUwd_FgQ",
     "CAADBQADAQADh68vOP4aZy5tiSXlFgQ",
     "CAADBQADKAADh68vOAABLBgqCrYYFRYE",
-    "CAADBQADLgADh68vODlskrbAM9dEFgQ")
+    "CAADBQADLgADh68vODlskrbAM9dEFgQ",
+)
